@@ -7,7 +7,6 @@ export interface Payment {
 	status: string;
 	date: string;
 	description: string;
-	clientId?: string;
 }
 
 export interface PaymentSearchResponse {
