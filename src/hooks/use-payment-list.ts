@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { API_URL } from "../constants";
 import { I18N } from "../constants/i18n";
-import type { Payment } from "../types/payment";
+import type { Payment, PaymentSearchResponse } from "../types/payment";
 
-type UsePaymentListParams = {
+type PaymentListParams = {
     search?: string;
     page?: number;
     currency?: string;
@@ -29,10 +29,7 @@ export const usePaymentList = ({
     currency = "",
     page = 1,
     pageSize = 5,
-}: UsePaymentListParams): {
-    paymentList: Payment[];
-    errorMessage: string;
-} => {
+}: PaymentListParams): PaymentSearchResponse => {
     const [paymentList, setPaymentList] = useState<Payment[]>([]);
     const [errorMessage, setErrorMessage] = useState("");
 
@@ -80,5 +77,5 @@ export const usePaymentList = ({
         };
     }, [currency, page, pageSize, search]);
 
-    return { paymentList, errorMessage };
+    return { payments:paymentList, errorMessage };
 };

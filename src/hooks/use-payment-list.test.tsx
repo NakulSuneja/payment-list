@@ -20,7 +20,7 @@ describe("usePaymentList", () => {
     const { result } = renderHook(() => usePaymentList({}));
 
     await waitFor(() => {
-      expect(result.current.paymentList.length).toBeGreaterThan(0);
+      expect(result.current.payments.length).toBeGreaterThan(0);
     });
 
     expect(result.current.errorMessage).toBe("");
@@ -33,7 +33,7 @@ describe("usePaymentList", () => {
       expect(result.current.errorMessage).toBe(I18N.PAYMENT_NOT_FOUND);
     });
 
-    expect(result.current.paymentList).toEqual([]);
+    expect(result.current.payments).toEqual([]);
   });
 
   test("maps 500 response to i18n internal server error message", async () => {
@@ -43,6 +43,6 @@ describe("usePaymentList", () => {
       expect(result.current.errorMessage).toBe(I18N.INTERNAL_SERVER_ERROR);
     });
 
-    expect(result.current.paymentList).toEqual([]);
+    expect(result.current.payments).toEqual([]);
   });
 });

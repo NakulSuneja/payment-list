@@ -48,7 +48,7 @@ export const PaymentsPage = () => {
 
   const { page, search, currency } = filters;
   const pageSize = 5;
-  const { paymentList, errorMessage } = usePaymentList({
+  const { payments, errorMessage } = usePaymentList({
     page,
     pageSize,
     search,
@@ -56,7 +56,7 @@ export const PaymentsPage = () => {
   });
 
   const isPreviousDisabled = page === 1;
-  const isNextDisabled = paymentList.length < pageSize;
+  const isNextDisabled = payments.length < pageSize;
 
   const onSearchClick = () => {
     const searchInput = searchInputRef.current?.value ?? "";
@@ -127,7 +127,7 @@ export const PaymentsPage = () => {
             </TableRow>
           </thead>
           <tbody>
-            {paymentList.map((payment) => (
+            {payments.map((payment) => (
               <TableRow key={payment.id}>
                 <TableCell>{payment.id}</TableCell>
                 <TableCell>{formatDateTime(payment.date)}</TableCell>

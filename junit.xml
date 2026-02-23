@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites name="vitest tests" tests="3" failures="0" errors="0" time="0.184005042">
-    <testsuite name="src/hooks/use-payment-list.test.tsx" timestamp="2026-02-23T16:58:00.483Z" hostname="MacBook-Pro.local" tests="3" failures="0" errors="0" skipped="0" time="0.184005042">
-        <testcase classname="src/hooks/use-payment-list.test.tsx" name="usePaymentList &gt; returns payments for default query" time="0.067782125">
+<testsuites name="vitest tests" tests="14" failures="0" errors="0" time="1.0719292">
+    <testsuite name="src/App.test.tsx" timestamp="2026-02-23T21:28:10.891Z" hostname="Nakul" tests="11" failures="0" errors="0" skipped="0" time="0.7911369">
+        <testcase classname="src/App.test.tsx" name="App - Step 1: Basic Payment List &gt; should fetch and display payments in a table with page=1 and pageSize=5" time="0.2773142">
         </testcase>
-        <testcase classname="src/hooks/use-payment-list.test.tsx" name="usePaymentList &gt; maps 404 response to i18n payment not found message" time="0.059229209">
+        <testcase classname="src/App.test.tsx" name="App - Step 2: Search by Payment ID &gt; should have a search input for payment ID" time="0.0143797">
         </testcase>
-        <testcase classname="src/hooks/use-payment-list.test.tsx" name="usePaymentList &gt; maps 500 response to i18n internal server error message" time="0.055398375">
+        <testcase classname="src/App.test.tsx" name="App - Step 2: Search by Payment ID &gt; should search for payments by payment ID" time="0.0710713">
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="App - Step 3: Clear Filters &gt; should clear all filters when clear button is clicked" time="0.0669548">
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="App - Step 4: Handle Payment Not Found &gt; should display error message when payment ID is not found" time="0.0560736">
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="App - Step 5: Handle Server Error &gt; should display error message when API returns 500" time="0.0485428">
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="App - Step 6: Currency Filter &gt; should have a currency filter dropdown" time="0.0179658">
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="App - Step 6: Currency Filter &gt; should filter payments by currency when selected" time="0.028617">
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="App - Step 7: Combined Currency and Payment ID Filter &gt; should filter by both currency and payment ID" time="0.0463923">
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="App - Step 8: Pagination &gt; should display pagination controls" time="0.0795457">
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="App - Step 8: Pagination &gt; should disable previous button on first page" time="0.0782616">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/hooks/use-payment-list.test.tsx" timestamp="2026-02-23T21:28:10.900Z" hostname="Nakul" tests="3" failures="0" errors="0" skipped="0" time="0.2807923">
+        <testcase classname="src/hooks/use-payment-list.test.tsx" name="usePaymentList &gt; returns payments for default query" time="0.0927968">
+        </testcase>
+        <testcase classname="src/hooks/use-payment-list.test.tsx" name="usePaymentList &gt; maps 404 response to i18n payment not found message" time="0.0871185">
+        </testcase>
+        <testcase classname="src/hooks/use-payment-list.test.tsx" name="usePaymentList &gt; maps 500 response to i18n internal server error message" time="0.0960268">
         </testcase>
     </testsuite>
 </testsuites>
