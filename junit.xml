@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="3" failures="0" errors="0" time="0.184005042">
+    <testsuite name="src/hooks/use-payment-list.test.tsx" timestamp="2026-02-23T16:58:00.483Z" hostname="MacBook-Pro.local" tests="3" failures="0" errors="0" skipped="0" time="0.184005042">
+        <testcase classname="src/hooks/use-payment-list.test.tsx" name="usePaymentList &gt; returns payments for default query" time="0.067782125">
+        </testcase>
+        <testcase classname="src/hooks/use-payment-list.test.tsx" name="usePaymentList &gt; maps 404 response to i18n payment not found message" time="0.059229209">
+        </testcase>
+        <testcase classname="src/hooks/use-payment-list.test.tsx" name="usePaymentList &gt; maps 500 response to i18n internal server error message" time="0.055398375">
+        </testcase>
+    </testsuite>
+</testsuites>
